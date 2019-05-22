@@ -1,0 +1,14 @@
+prefix=/home/noroot/frida/build/frida_thin-linux-arm
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+gumjs_duktape=enabled
+gumjs_v8=disabled
+
+Name: GumJS
+Description: Gum JavaScript bindings
+Version: 1.0.0
+Requires: frida-gum-1.0, glib-2.0 >= 2.60, gobject-2.0, gio-2.0, capstone, json-glib-1.0, libffi, sqlite3, libsoup-2.4, gio-unix-2.0
+Libs: -L${libdir} -lfrida-gumjs-1.0 -ldwarf -lelf -ldl -lz
+Libs.private: -lm
+Cflags: -I${includedir}/frida-1.0

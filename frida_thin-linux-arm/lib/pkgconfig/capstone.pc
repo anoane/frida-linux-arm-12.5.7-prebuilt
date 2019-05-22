@@ -1,0 +1,8 @@
+Name: capstone
+Description: Capstone disassembly engine
+Version: 5.0.0
+libdir=/home/noroot/frida/build/frida_thin-linux-arm/lib
+includedir=/home/noroot/frida/build/frida_thin-linux-arm/include/capstone
+archive=${libdir}/libcapstone.a
+Libs: -L${libdir} -lcapstone
+Cflags: -I${includedir}
